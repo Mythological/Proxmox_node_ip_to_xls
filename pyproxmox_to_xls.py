@@ -2,6 +2,7 @@
 from pyproxmox import *
 import xlwt
 import getpass
+import os
 
 ip_addr = raw_input("Proxmox's host or IP:")
 login = raw_input("login:")
@@ -32,4 +33,5 @@ for i in a3:
     count2 += 1
 
 workbook.save("Nodes_ip_proxmox.xls")
+print "File created at:" +" "+  os.path.abspath("Nodes_ip_proxmox.xls")
 
