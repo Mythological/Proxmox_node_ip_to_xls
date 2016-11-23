@@ -16,9 +16,9 @@ b = pyproxmox(a)
 a2 = b.getClusterStatus()
 a3 = a2[u'data']
 
-for i in a3:
-    print i.get(u'name')
-    print i.get(u'ip')
+#for i in a3:
+#    print i.get(u'name')
+#    print i.get(u'ip')
 
 workbook = xlwt.Workbook() 
 sheet = workbook.add_sheet("Sheet1", cell_overwrite_ok=True)
@@ -31,5 +31,5 @@ for i in a3:
     count += 1
     count2 += 1
 
-workbook.save("my3.xls")
+workbook.save("Nodes_ip_proxmox.xls")
 
